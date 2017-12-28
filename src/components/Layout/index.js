@@ -6,7 +6,11 @@ import {
   color,
   textAlign,
   justifyContent,
-  responsiveStyle
+  alignItems,
+  responsiveStyle,
+  flex,
+  flexDirection,
+  borderWidth
 } from 'styled-system';
 
 const wrap = responsiveStyle({
@@ -16,10 +20,14 @@ const wrap = responsiveStyle({
 
 export const Box = styled.div`
   overflow: hidden;
-  ${space} ${width} ${fontSize} ${color} ${textAlign};
+  ${space} ${width} ${fontSize} ${color} ${textAlign} ${borderWidth};
 `;
 
 export const Flex = styled.div`
   display: flex;
-  ${justifyContent} ${wrap};
+  ${justifyContent} ${alignItems} ${wrap} ${flexDirection};
+`;
+
+export const FlexChild = styled.div`
+  ${flex};
 `;

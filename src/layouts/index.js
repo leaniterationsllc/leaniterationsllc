@@ -2,8 +2,6 @@ import React from 'react';
 import styled, { injectGlobal } from 'react-emotion';
 import { fontSize } from 'styled-system';
 import PropTypes from 'prop-types';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import colors from '../utils/colors';
 
 /* eslint-disable */
@@ -19,6 +17,12 @@ injectGlobal`
              sans-serif;
       box-sizing: border-box;
   };
+  body,html, #___gatsby {
+    height: 100%;
+  }
+  body: {
+    margin: 0;
+  }
   a {
     text-decoration: none;
     color: inherit;
@@ -36,15 +40,12 @@ injectGlobal`
 /* eslint-enable */
 
 const FontConfig = styled.div`
+  height: 100%;
   ${fontSize};
 `;
 
 const Layout = ({ children }) => (
-  <FontConfig fontSize={[2, 3, 4]}>
-    <Navigation />
-    {children()}
-    <Footer />
-  </FontConfig>
+  <FontConfig fontSize={[2, 3, 4]}>{children()}</FontConfig>
 );
 
 Layout.propTypes = {
