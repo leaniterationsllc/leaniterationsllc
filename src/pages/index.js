@@ -30,10 +30,8 @@ export default () => (
     </FlexChild>
     <FlexChild flex={2}>
       <CenteredText>
-        We are lean consultants that provide go to market strategy and pricing.
-      </CenteredText>
-      <CenteredText>
-        We can help you scale so that your competition is an afterthought.
+        We are lean consultants that provide go to market strategy and pricing
+        for your business.
       </CenteredText>
     </FlexChild>
   </Flex>
