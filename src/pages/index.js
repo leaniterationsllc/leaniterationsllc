@@ -8,6 +8,11 @@ const CenteredText = styled.p`
   text-align: center;
 `;
 
+const SmallText = styled.p`
+  text-align: center;
+  font-size: 12px;
+`;
+
 export default () => (
   <Flex
     justify="center"
@@ -33,6 +38,9 @@ export default () => (
         We are lean consultants that provide go to market strategy and pricing
         for your business.
       </CenteredText>
+    </FlexChild>
+    <FlexChild flex="0 20px">
+      <SmallText>&copy; 2017 Copyright Lean Iterations LLC</SmallText>
     </FlexChild>
   </Flex>
 );
